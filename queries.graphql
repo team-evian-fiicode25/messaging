@@ -1,0 +1,34 @@
+subscription LoginCreated {
+  login: loginCreated {
+    username
+    phoneNumber {
+      number
+      verifyCode
+    }
+    email {
+      address
+      verifyToken
+    }
+  }
+}
+
+subscription EmailVerificationRequested {
+    login: emailVerificationRequested {
+        username
+        email {
+            address
+            verifyToken
+        }
+    }
+}
+
+subscription PhoneVerificationRequested {
+    login: phoneVerificationRequested {
+        username
+        phoneNumber {
+            number
+            verifyCode
+        }
+    }
+}
+
